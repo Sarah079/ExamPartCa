@@ -1,0 +1,16 @@
+﻿@model CrudeDBMeasurementModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <p>On filtering a patient's next of kin:</p>
+
+    <p>@Model.ConnectionStatus.Message</p>
+    @if (Model.ConnectionStatus.Status)
+    {
+        <p>Slowest query done locally is @Model.SlowestInMemoryQuery ms</p>
+        <p>Slowest query handled by the db server is @Model.SlowestRemoteQuery ms</p>
+    }
+
+</div>

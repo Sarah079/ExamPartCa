@@ -1,0 +1,14 @@
+﻿@model DbConnectionStatusModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <p>On connecting to the database:</p>
+
+    <p>@Model.Message</p>
+    @if (Model.Status) {
+        <p>&#x1F44D;</p>
+    }
+
+</div>
